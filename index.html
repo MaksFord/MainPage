@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MainPage</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+</head>
+<body id="body">
+    <header>
+        <div class="logo">MainLogo</div>
+        <ul class="headerLinks">
+            <li class="dropMenu">
+                <button>
+                    <i class="Drop">Language</i> </button>
+                <div class="dropContent">
+                    <i class="firstEl" onclick=switchLang(0)>English</i>
+                    <i onclick=switchLang(1)>Русский</i>
+                    <i class="lastEl" onclick=switchLang(2)>Deutsche</i>
+                </div>
+            </li>
+            <li class="dropMenu">
+                <button>
+                    <i class="Drop">Themes</i> </button>
+                <div class="dropContent">
+                    <i class="firstEl" onclick=switchTheme(0)>Light</i>
+                    <i onclick=switchTheme(1)>Dark</i>
+                    <i onclick=switchTheme(2)>Red</i>
+                    <i class="lastEl" onclick=switchTheme(3)>Toxic</i>
+                </div>
+            </li>
+            <li class="dropMenu">
+                <button>
+                    <i class="Drop">Links</i></button>
+                <div class="dropContent">
+                    <i  class="firstEl"  href="#">GitHub</i>
+                    <i href="#">linkedin</i>
+                    <i class="lastEl" href="#">Discord</i>
+                </div>
+            </li>
+
+        </ul>
+    </header>
+
+<h1 lang="en">My projects</h1>
+<p lang="en">Projects previews attached below.
+    Every project published on it's own page, with source code link and functionality description. <br>
+    In addtition to that, commentary added. They can describe development process, why some functions
+    were implemented like that or just something i found interesting at the moment.</p>
+<h1 lang="ru">Мои проекты</h1>
+<p lang="ru">Ниже приложены превью работ. 
+    Каждый проект опубликован на отдельной странице, 
+    добавлена ссылка на исходный код и описание функций. <br>
+    Дополнительно к этому, добавлены комментарии, 
+    описывающие ход разработки, почему некоторые функции были реализованы так или иначе,
+    или просто вещи, показавшиеся мне интересными. </p>
+<h1 lang="de">Meine Vorhaben</h1>
+<p lang="de">no german for now :(</p>
+
+
+<button onclick=localStorage.clear()>CLEAR STORAGE</button>
+
+<div class="container">
+    <div class="project">
+        <img src="Landscape.jpg" class="preview Pic">
+        <i class="textOnImage">Organizer App</i>
+        <p class="preview Text">Preview name. Additional text to check the style.</p>
+    </div>
+    <div class="project">
+        <img src="Landscape.jpg" class="preview Pic">
+        <i class="textOnImage">Weather Widget</i>
+        <p class="preview Text">Preview name. Additional text to check the style.</p>
+    </div>
+    <div class="project">
+        <img src="Landscape.jpg" class="preview Pic">
+        <i class="textOnImage">???</i>
+        <p class="preview Text">Preview name. Additional text to check the style.</p>
+    </div>
+</div>
+<p lang="en"></p>
+<div class="quote">
+    <h2 lang="en">Commentary</h2>
+    <p lang="en">This page was created as the basis for my future portfolio.
+    I wanted to add language switcher and nessessary links list but the main goal was to make the page 
+    visually attractive while having multiple color themes as an option.
+    Originally i planned to use different tool for each elements in header, button for language,
+    select tool for the themes and display switcher for the links but ended up with the last for all
+    for aestetic purposes. Select require too many crutches to style properly and i end up using the
+    same option for all because the result simply looked nicer. After main functions were ready I made
+    some optimization for smaller screens.
+</p>
+</div>
+
+
+
+<footer><i>MaksFord (c) 2023</i></footer>
+</body>
+</html>

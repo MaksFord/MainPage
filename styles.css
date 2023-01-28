@@ -1,0 +1,208 @@
+:root {
+    --enVis: block;
+    --ruVis: none;
+    --deVis: none;
+  }
+
+.lightTheme{
+    --color-primary:white;  
+    --color-secondary: black;
+    --color-header: #0a0a47;
+    --color-header-text: #f3ebeb;
+    --color-accent:#14cbfd;
+    --font-logo: "brush script MT", fantasy, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --font-i: fantasy;
+    --color-quote: #a5a5a5;
+}
+.darkTheme{
+    --color-primary:#0a0a47; 
+    --color-secondary: white;
+    --color-header: black;
+    --color-header-text: #f3ebeb;
+    --color-accent:#2c29fa;
+    --font-logo: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --font-i: fantasy;
+}
+.redTheme{
+    --color-primary:#ffef13; 
+    --color-secondary: rgb(53, 12, 12);
+    --color-header: #650202;
+    --color-header-text: #f4dc7b;
+    --color-accent:#ef1919;
+    --font-logo: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --font-i: fantasy;
+}
+.toxicTheme{
+    --color-primary:rgb(115, 255, 87); 
+    --color-secondary: #710087;
+    --color-header: #710087;
+    --color-header-text: #edf3eb;
+    --color-accent:#06ff06;
+    --font-logo: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --font-i: fantasy;
+}
+
+body{
+    margin: 0;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+}
+
+header, footer {
+    background-color: var(--color-header);
+    color: var(--color-header-text);
+    font-size: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px;
+    padding: 0.5em 5%;
+}
+
+.headerLinks {
+    display: flex;
+    list-style: none;
+    gap: 1em;
+}
+.logo {
+    font-family: "brush script MT", fantasy, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 50px;
+    color:white;
+    -webkit-text-stroke: 1px var(--color-accent);
+}
+.socials{
+    box-shadow: 0;
+}
+.headerLinks li:hover,i:hover {
+    color: var(--color-accent)
+}
+button {
+    border:none;
+    outline:none;
+    color:var(--color-header-text);
+    background-color:var(--color-header);
+}
+.dropContent {
+    display:none;
+    position:absolute;
+    width:100px;
+    color:var(--color-header-text);
+    background-color:var(--color-header);
+    z-index: 1;
+    cursor: default
+}
+.dropMenu{
+    flex:1 1 0;
+}
+.firstEl {
+    margin-top:15px;
+}
+.lastEl {
+    margin-bottom:15px;
+}
+.dropMenu:hover .dropContent {
+    display:flex;
+    flex-direction: column;
+    justify-items:center;
+    align-items: center; 
+}
+.dropContent a,i{
+    text-decoration:none;
+    color:var(--color-header-text);
+    margin: 10px;
+    cursor: default
+}
+
+.dropContent a:hover{
+    color: var(--color-accent);
+}
+
+h1:lang(en),p:lang(en){
+    display:var(--enVis)
+}
+h1:lang(ru),p:lang(ru){
+    display:var(--ruVis)
+}
+h1:lang(de),p:lang(de){
+    display:var(--deVis)
+}
+p {margin:0;
+    padding:0.5em 15%}
+H1 {
+    font-size:48px;
+    text-align:center;
+    font-family:'Times New Roman', Times, serif;
+    margin:0;
+    padding:0.25em;
+}
+i {
+    font-family: var(--font-i);
+    font-size: 20px;
+    color:var(--color-header-text);
+    font-style:italic;
+}
+.container {
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+.project{width: 260px;
+    margin:15px;
+}
+
+.preview.Pic {
+    width:250px;
+    background-color:black;
+    border-radius:15%;
+    border: 5px solid var(--color-header)
+}
+.preview.Text{
+    margin: 0;
+    padding:0.5em 15%;
+}
+.project{
+    position:relative;
+}
+.textOnImage {
+    position:absolute;
+    color:var(--color-primary);
+    text-align:center;
+    margin:0;
+    left:0;
+    top:60px;
+    width: 250px;
+    font-size: 52px;
+    font-weight: bold;
+    -webkit-text-stroke: 2px var(--color-secondary)
+}
+
+@media only screen and (max-width: 600px){
+    
+    header{display:flex;
+    flex-direction:column;
+    align-items:center;
+    font-size:12px;}
+    .headerLinks{display:flex;
+    justify-content:center;
+    padding:0;}
+    .dropContent{width: 60px;}
+.logo{font-size:30px}
+i{font-size:12px}
+}
+.quote{
+    background-color: var(--color-quote);
+    margin: 2em 5%;
+    padding: 1em;   
+}
+h2{
+    font-size:30px;
+    margin: 10px;
+}
+.quote p{padding:0 10%}
+footer{
+    margin-top: 20px;
+    width:100%;
+    display:flex;
+    justify-content:center;
+}
